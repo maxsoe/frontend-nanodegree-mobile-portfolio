@@ -517,7 +517,8 @@ function updatePositions() {
   var items = document.getElementsByClassName('mover');
   // distanceFromTop only needs to be calculated once
   var distanceFromTop = document.body.scrollTop / 1250;
-  for (var i = 0; i < items.length; i++) {
+  var totalPizzas = items.length;
+  for (var i = 0; i < totalPizzas; i++) {
     var phase = Math.sin((distanceFromTop) + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
