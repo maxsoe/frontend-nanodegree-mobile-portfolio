@@ -536,7 +536,10 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  for (var i = 0; i < 50; i++) {
+  var screenHeight = screen.height;
+  var rows = Math.floor(screenHeight / s); // find out how many rows of pizzas we need to generate in the background
+  var totalPizzas = rows * cols; // total number of pizzas we need to generate
+  for (var i = 0; i < totalPizzas; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
