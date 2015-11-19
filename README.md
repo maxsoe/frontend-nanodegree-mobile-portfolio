@@ -22,3 +22,5 @@ Optimizations made:
 - remove forced frame in changePizzaSizes(). Pull DOM accessor out of loop and place into the variable "randomPizzas"
 - remove determineDX as it's redundant
 - changePizzaSizes uses percentage values rather than pixel values.
+- only render 50 pizzas rather than 200
+- use getElementsByClassName rather than querySelectorAll
