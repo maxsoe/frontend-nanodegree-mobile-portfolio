@@ -463,7 +463,8 @@ var resizePizzas = function(size) {
     var randomPizzas = document.getElementsByClassName("randomPizzaContainer"); // get all the random pizzas from DOM
 
     // loop through all the pizzas and change their size
-    for (var i = 0; i < randomPizzas.length; i++) {
+    var totalPizzas = randomPizzas.length;
+    for (var i = 0; i < totalPizzas; i++) {
       randomPizzas[i].style.width = newwidth + "%";
     }
   }
