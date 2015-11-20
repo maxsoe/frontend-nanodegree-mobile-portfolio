@@ -546,6 +546,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var rows = Math.floor(screenHeight / s); // find out how many rows of pizzas we need to generate in the background
   var totalPizzas = rows * cols; // total number of pizzas we need to generate
   var elem;
+  var movingPizzas = document.getElementById("movingPizzas1"); // Get movingPizzas1 from DOM
   for (var i = 0; i < totalPizzas; i++) {
     elem = document.createElement('img');
     elem.className = 'mover';
@@ -554,7 +555,7 @@ document.addEventListener('DOMContentLoaded', function() {
     elem.style.width = "73.333px";
     elem.basicLeft = (i % cols) * s;
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
-    document.getElementById("movingPizzas1").appendChild(elem);
+    movingPizzas.appendChild(elem);
   }
   requestAnimationFrame(updatePositions);
 });
