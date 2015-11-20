@@ -446,6 +446,7 @@ var resizePizzas = function(size) {
 
   // Iterates through pizza elements on the page and changes their widths as a percentage
   function changePizzaSizes(size) {
+    var newwidth;
     switch (size) {
       case "1":
         newwidth = 25;
